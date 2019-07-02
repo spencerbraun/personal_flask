@@ -177,6 +177,14 @@ def logout():
     return render_template("logout.html")
 
 
+@app.route("/")
+def index():
+    return render_template("index.html")
+
+@app.route("/about")
+def about():
+    return render_template("about.html")
+
 @app.route("/writing")
 def writing():
     search_query = request.args.get("q")
@@ -191,8 +199,8 @@ def writing():
     # http://docs.peewee-orm.com/en/latest/peewee/playhouse.html#object_list
     return object_list("writing.html", query, search=search_query, check_bounds=False)
 
-@app.route("/")
-def index():
+@app.route("/projects")
+def projects():
     search_query = request.args.get("q")
     if search_query:
         query = Entry.search(search_query)
@@ -203,7 +211,8 @@ def index():
     # paginating the results if there are more than 20. For more info see
     # the docs:
     # http://docs.peewee-orm.com/en/latest/peewee/playhouse.html#object_list
-    return object_list("index.html", query, search=search_query, check_bounds=False)
+    return object_list("projects.html", query, search=search_query, check_bounds=False)
+
 
 
 def _create_or_edit(entry, template):

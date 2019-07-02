@@ -25,40 +25,14 @@
 
 <body>
 
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-    <div class="container">
-      <!-- <a class="navbar-brand" href="index.html">spencer braun</a> -->
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        menu
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('index') }}">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('index') }}">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('writing') }}">Writing</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('index') }}">Projects</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
 
   <!-- Page Header -->
   <!-- <header class="masthead" style="background-image: url('static/img/home-bg.jpg')"> -->
-  <header class="masthead" style="background-color:#041c47">
+  <header class="masthead" style="background-color:#ffffff">
     <div class="overlay"></div>
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="ml-auto col-12">
           <div class="site-heading">
             <h1>Spencer Braun</h1>
             <!-- <span class="subheading">Site stub</span> -->
@@ -68,31 +42,53 @@
     </div>
   </header>
 
-  <!-- Main Content -->
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="container">
-            {% for category, message in get_flashed_messages(with_categories=true) %}
-              <div class="alert alert-{{ category }} alert-dismissable">
-                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                <p>{{ message }}</p>
-              </div>
-            {% endfor %}
 
-            {% block page_header %}
-              <div class="page-header">
-                <h1>{% block content_title %}{% endblock %}</h1>
-              </div>
-            {% endblock %}
+  <div class="d-flex" id="wrapper">
+      <!-- Sidebar -->
+      <div class="bg" id="sidebar-wrapper">
+        <!-- <div class="sidebar-heading">Spencer Braun </div> -->
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('index') }}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('about') }}">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('writing') }}">Writing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('projects') }}">Projects</a>
+          </li>
+        </ul>
+      </div>
 
-            {% block content %}{% endblock %}
+      <!-- Main Content -->
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+              <div class="container">
+                {% for category, message in get_flashed_messages(with_categories=true) %}
+                  <div class="alert alert-{{ category }} alert-dismissable">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <p>{{ message }}</p>
+                  </div>
+                {% endfor %}
 
+                {% block page_header %}
+                  <div class="page-header">
+                    <h1>{% block content_title %}{% endblock %}</h1>
+                  </div>
+                {% endblock %}
+
+                {% block content %}{% endblock %}
+
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-  <hr>
+      <hr>
+ </div>
 
   <!-- Footer -->
   <footer>
@@ -101,23 +97,30 @@
         <div class="col-lg-8 col-md-10 mx-auto">
           <ul class="list-inline text-center">
             <li class="list-inline-item">
-              <a href="#">
-                <span class="fa-stack fa-lg">
+              <a href="https://www.linkedin.com/in/spencerfbraun/">
+                <span class="fa-stack fa-sm">
                   <i class="fas fa-circle fa-stack-2x"></i>
-                  <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                  <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
                 </span>
               </a>
             </li>
             <li class="list-inline-item">
-              <a href="#">
-                <span class="fa-stack fa-lg">
+              <a href="https://github.com/spencerbraun">
+                <span class="fa-stack fa-sm">
                   <i class="fas fa-circle fa-stack-2x"></i>
                   <i class="fab fa-github fa-stack-1x fa-inverse"></i>
                 </span>
               </a>
             </li>
+            <li class="list-inline-item">
+              <a href="https://twitter.com/spencerfbraun">
+                <span class="fa-stack fa-sm">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
           </ul>
-          <p class="copyright text-muted">Copyright &copy; spencer braun 2019</p>
         </div>
       </div>
     </div>

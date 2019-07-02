@@ -6,7 +6,7 @@
 
 body {
   font-size: 20px;
-  color: #212529;
+  color: #455561;
   font-family: 'Lora', 'Times New Roman', serif;
 }
 
@@ -30,13 +30,13 @@ h6 {
 }
 
 a {
-  color: #212529;
+  color: #0B4575;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 
 a:focus, a:hover {
-  color: #0085A1;
+  color: #64A6Bd;
 }
 
 blockquote {
@@ -63,13 +63,13 @@ blockquote {
 
 ::-moz-selection {
   color: #fff;
-  background: #0085A1;
+  background: #64A6Bd;
   text-shadow: none;
 }
 
 ::selection {
   color: #fff;
-  background: #0085A1;
+  background: #64A6Bd;
   text-shadow: none;
 }
 
@@ -101,9 +101,9 @@ img::-moz-selection {
 }
 
 #mainNav .navbar-toggler {
-  font-size: 12px;
-  font-weight: 800;
-  padding: 13px;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 0px;
   text-transform: uppercase;
   color: #343a40;
 }
@@ -176,9 +176,9 @@ img::-moz-selection {
 }
 
 header.masthead {
-  margin-bottom: 50px;
+  margin-bottom: 10px;
   background: no-repeat center center;
-  background-color: #868e96;
+  background-color: #ffffff;
   background-attachment: scroll;
   position: relative;
   background-size: cover;
@@ -197,32 +197,28 @@ header.masthead .overlay {
 header.masthead .page-heading,
 header.masthead .post-heading,
 header.masthead .site-heading {
-  padding: 200px 0 150px;
+  padding: 10px 0 10px;
   color: white;
+  text-align: left;
 }
 
 @media only screen and (min-width: 768px) {
   header.masthead .page-heading,
   header.masthead .post-heading,
   header.masthead .site-heading {
-    padding: 200px 0;
+    padding: 30px 0;
   }
-}
-
-header.masthead .page-heading,
-header.masthead .site-heading {
-  text-align: center;
 }
 
 header.masthead .page-heading h1,
 header.masthead .site-heading h1 {
-  font-size: 50px;
+  font-size: 10px;
   margin-top: 0;
 }
 
 header.masthead .page-heading .subheading,
 header.masthead .site-heading .subheading {
-  font-size: 24px;
+  font-size: 14px;
   font-weight: 300;
   line-height: 1.1;
   display: block;
@@ -233,12 +229,12 @@ header.masthead .site-heading .subheading {
 @media only screen and (min-width: 768px) {
   header.masthead .page-heading h1,
   header.masthead .site-heading h1 {
-    font-size: 80px;
+    font-size: 20px;
   }
 }
 
 header.masthead .post-heading h1 {
-  font-size: 35px;
+  font-size: 15px;
 }
 
 header.masthead .post-heading .meta,
@@ -248,14 +244,14 @@ header.masthead .post-heading .subheading {
 }
 
 header.masthead .post-heading .subheading {
-  font-size: 24px;
+  font-size: 14px;
   font-weight: 600;
   margin: 10px 0 30px;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 header.masthead .post-heading .meta {
-  font-size: 20px;
+  font-size: 14px;
   font-weight: 300;
   font-style: italic;
   font-family: 'Lora', 'Times New Roman', serif;
@@ -388,13 +384,13 @@ footer .list-inline {
 }
 
 footer .copyright {
-  font-size: 14px;
+  font-size: 12px;
   margin-bottom: 0;
   text-align: center;
 }
 
 .btn {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 800;
   padding: 15px 25px;
   letter-spacing: 1px;
@@ -415,6 +411,77 @@ footer .copyright {
 }
 
 .btn-lg {
-  font-size: 16px;
+  font-size: 12px;
   padding: 25px 35px;
+}
+
+
+
+#sidebar-wrapper {
+  min-height: 60vh;
+  margin-left: -15rem;
+  -webkit-transition: margin .25s ease-out;
+  -moz-transition: margin .25s ease-out;
+  -o-transition: margin .25s ease-out;
+  transition: margin .25s ease-out;
+  background: #ffffff;
+  padding: 6px 8px 6px 16px;
+  font-size: 18px;
+  }
+}
+
+#sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
+}
+
+#sidebar-wrapper .list-group {
+  width: 15rem;
+}
+
+#page-content-wrapper {
+  min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+  }
+}
+
+
+.sidenav {
+  width: 130px;
+  position: fixed;
+  z-index: 1;
+  top: 20px;
+  left: 10px;
+  background: #eee;
+  overflow-x: hidden;
+  padding: 8px 0;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #2196F3;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #064579;
 }
