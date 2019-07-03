@@ -152,7 +152,7 @@ def login_required(fn):
     return inner
 
 
-@app.route("/login/", methods=["GET", "POST"])
+@app.route("/login", methods=["GET", "POST"])
 def login():
     next_url = request.args.get("next") or request.form.get("next")
     if request.method == "POST" and request.form.get("password"):
@@ -169,7 +169,7 @@ def login():
     return render_template("login.html", next_url=next_url)
 
 
-@app.route("/logout/", methods=["GET", "POST"])
+@app.route("/logout", methods=["GET", "POST"])
 def logout():
     if request.method == "POST":
         session.clear()
@@ -240,20 +240,20 @@ def _create_or_edit(entry, template):
     return render_template(template, entry=entry)
 
 
-@app.route("/create/", methods=["GET", "POST"])
+@app.route("/create", methods=["GET", "POST"])
 @login_required
 def create():
     return _create_or_edit(Entry(title="", content=""), "create.html")
 
 
-@app.route("/drafts/")
+@app.route("/drafts")
 @login_required
 def drafts():
     query = Entry.drafts().order_by(Entry.timestamp.desc())
     return object_list("index.html", query, check_bounds=False)
 
 
-@app.route("/<slug>/")
+@app.route("/<slug>")
 def detail(slug):
     if session.get("logged_in"):
         query = Entry.select()
@@ -263,7 +263,7 @@ def detail(slug):
     return render_template("detail.html", entry=entry)
 
 
-@app.route("/<slug>/edit/", methods=["GET", "POST"])
+@app.route("/<slug>/edit", methods=["GET", "POST"])
 @login_required
 def edit(slug):
     entry = get_object_or_404(Entry, Entry.slug == slug)

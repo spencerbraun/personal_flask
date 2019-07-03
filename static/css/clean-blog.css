@@ -4,26 +4,63 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-clean-blog/blob/master/LICENSE)
  */
 
-body {
-  font-size: 20px;
-  color: #455561;
-  font-family: 'Lora', 'Times New Roman', serif;
+html {
+  font-size: 25px;
+  color: #0B4575;
+  font-family: 'Josefin Sans', sans-serif;
 }
+
+body {
+    font-size: 25px;
+    color: #0B4575;
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 0 5px 5px 5px;
+},
 
 p {
   line-height: 1.5;
-  margin: 30px 0;
+  margin: 0px 0;
+  font-size: 15px;
+  color: light-grey;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  margin: 0px 0;
 }
 
 p a {
   text-decoration: underline;
 }
 
-h1,
-h2,
+.bigname {
+  color: #0B4575;
+  font-weight:600;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 100px;
+},
+
+h1 {
+  margin: 0;
+  padding: 20px 0;
+  color: black;
+},
+
+
+h2 {
+  font-size: 25px;
+  color: #0B4575;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight:600;
+  margin: 15px 0;
+},
 h3,
 h4,
-h5,
+h5 {
+  font-size: 15px;
+  color: #0B4575;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight:300;
+  margin-bottom: 25px 0;
+},
 h6 {
   font-weight: 800;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -31,10 +68,18 @@ h6 {
 
 a {
   color: #0B4575;
-  font-family: 'Special Elite', cursive;
+  font-family: 'Josefin Sans', sans-serif;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
+
+a.post_title {
+  font-size: 20px;
+  color: #0B4575;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight:600;
+  margin: 0px 0;
+},
 
 a:focus, a:hover {
   color: #64A6Bd;
@@ -214,8 +259,8 @@ header.masthead .page-heading h1,
 header.masthead .site-heading h1 {
   font-size: 15px;
   margin-top: 0;
-  /* font-family: 'Monoton', cursive; */
-  font-family: 'Bungee Shade', cursive;
+  font-family: 'Josefin Sans', sans-serif;
+  /* font-family: 'Bungee Shade', cursive; */
 }
 
 header.masthead .page-heading .subheading,
@@ -293,7 +338,7 @@ header.masthead .post-heading .meta a {
 }
 
 .post-preview > .post-meta {
-  font-size: 18px;
+  font-size: 10px;
   font-style: italic;
   margin-top: 0;
   color: #868e96;
@@ -427,10 +472,10 @@ footer .copyright {
   -o-transition: margin .25s ease-out;
   transition: margin .25s ease-out;
   background: #ffffff;
-  padding: 6px 8px 6px 16px;
+  padding: 6px 30px 6px 16px;
   font-size: 18px;
+  border-right: 1px solid #0B4575;
   }
-}
 
 #sidebar-wrapper .sidebar-heading {
   padding: 0.875rem 1.25rem;
@@ -462,28 +507,4 @@ footer .copyright {
   #wrapper.toggled #sidebar-wrapper {
     margin-left: -15rem;
   }
-}
-
-
-.sidenav {
-  width: 130px;
-  position: fixed;
-  z-index: 1;
-  top: 20px;
-  left: 10px;
-  background: #eee;
-  overflow-x: hidden;
-  padding: 8px 0;
-}
-
-.sidenav a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #2196F3;
-  display: block;
-}
-
-.sidenav a:hover {
-  color: #064579;
 }

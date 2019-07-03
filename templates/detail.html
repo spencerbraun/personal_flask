@@ -1,7 +1,5 @@
 {% extends "base.html" %}
 
-{% block title %}{{ entry.title }}{% endblock %}
-
 {% block content_title %}{{ entry.title }}{% endblock %}
 
 {% block extra_header %}
@@ -11,6 +9,6 @@
 {% endblock %}
 
 {% block content %}
-  <p>Created {{ entry.timestamp.strftime('%m/%d/%Y at %I:%M%p') }}</p>
+  <h5>{{ entry.timestamp.strftime('%Y-%m-%d') }}</h5>
   {{ entry.html_content }}
 {% endblock %}

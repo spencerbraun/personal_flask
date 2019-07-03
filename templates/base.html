@@ -8,17 +8,20 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>spencer braun</title>
+  <title>Spencer Braun</title>
 
   <!-- Bootstrap core CSS -->
   <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom fonts for this template -->
   <link href="static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Monoton|Special+Elite&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Josefin+Sans:300i,600i&display=swap" rel="stylesheet">
   <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'> -->
 
   <!-- Custom styles for this template -->
+  <link rel="shortcut icon" href="static/img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="static/img/favicon.ico" type="image/x-icon">
+
   <link href="static/css/clean-blog.css" rel="stylesheet">
 
 </head>
@@ -34,7 +37,7 @@
       <div class="row">
         <div class="ml-auto col-12">
           <div class="site-heading">
-            <h1>Spencer Braun</h1>
+            <h1 class="bigname">Spencer Braun</h1>
             <!-- <span class="subheading">Site stub</span> -->
           </div>
         </div>
@@ -46,7 +49,6 @@
   <div class="d-flex" id="wrapper">
       <!-- Sidebar -->
       <div class="bg" id="sidebar-wrapper">
-        <!-- <div class="sidebar-heading">Spencer Braun </div> -->
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
             <a class="nav-link" href="{{ url_for('index') }}">Home</a>
@@ -74,10 +76,10 @@
                     <p>{{ message }}</p>
                   </div>
                 {% endfor %}
-
+                {% block title %}{% endblock %}
                 {% block page_header %}
                   <div class="page-header">
-                    <h1>{% block content_title %}{% endblock %}</h1>
+                    <h2>{% block content_title %}{% endblock %}</h2>
                   </div>
                 {% endblock %}
 
