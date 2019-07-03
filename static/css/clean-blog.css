@@ -31,6 +31,7 @@ h6 {
 
 a {
   color: #0B4575;
+  font-family: 'Special Elite', cursive;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
@@ -92,7 +93,6 @@ img::-moz-selection {
   position: absolute;
   border-bottom: 1px solid #e9ecef;
   background-color: white;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 #mainNav .navbar-brand {
@@ -190,7 +190,7 @@ header.masthead .overlay {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: #212529;
+  background-color: #ffffff;
   opacity: 0.5;
 }
 
@@ -198,7 +198,7 @@ header.masthead .page-heading,
 header.masthead .post-heading,
 header.masthead .site-heading {
   padding: 10px 0 10px;
-  color: white;
+  color: #0B4575;
   text-align: left;
 }
 
@@ -212,8 +212,10 @@ header.masthead .site-heading {
 
 header.masthead .page-heading h1,
 header.masthead .site-heading h1 {
-  font-size: 10px;
+  font-size: 15px;
   margin-top: 0;
+  /* font-family: 'Monoton', cursive; */
+  font-family: 'Bungee Shade', cursive;
 }
 
 header.masthead .page-heading .subheading,
@@ -229,7 +231,7 @@ header.masthead .site-heading .subheading {
 @media only screen and (min-width: 768px) {
   header.masthead .page-heading h1,
   header.masthead .site-heading h1 {
-    font-size: 20px;
+    font-size: 50px;
   }
 }
 
