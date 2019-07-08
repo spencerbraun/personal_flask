@@ -430,12 +430,6 @@ footer .list-inline {
   padding: 0;
 }
 
-footer .copyright {
-  font-size: 12px;
-  margin-bottom: 0;
-  text-align: center;
-}
-
 .btn {
   font-size: 12px;
   font-weight: 800;
@@ -465,7 +459,7 @@ footer .copyright {
 
 
 #sidebar-wrapper {
-  min-height: 60vh;
+  min-height: 45vh;
   margin-left: -15rem;
   -webkit-transition: margin .25s ease-out;
   -moz-transition: margin .25s ease-out;
