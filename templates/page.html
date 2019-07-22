@@ -1,6 +1,5 @@
 {% extends "basestatic.html" %}
-
-{% block content_title %}About{% endblock %}
 {% block content %}
-<div>content</div>
+        <h2>{{ page.title }}</h2>
+        {{ page.html|safe }}
 {% endblock %}
