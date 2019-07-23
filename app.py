@@ -4,6 +4,7 @@ import argparse
 import os
 import shutil
 import sys
+from pathlib import Path
 
 from flask import (
     Flask,
@@ -23,6 +24,20 @@ app = Flask(__name__)
 app.config.from_pyfile("settings.py")
 pages = FlatPages(app)
 freezer = Freezer(app)
+
+
+def customcopy(src, dst, symlinks=False, ignore=None):
+    for item in os.listdir(src):
+        s = os.path.join(src, item)
+        d = os.path.join(dst, item)
+        if os.path.isdir(s):
+            try:
+                shutil.copytree(s, d, symlinks, ignore)
+            except FileExistsError:
+                shutil.rmtree(d)
+                shutil.copytree(s, d, symlinks, ignore)
+        else:
+            shutil.copy2(s, d)
 
 
 @app.route("/")
@@ -60,18 +75,22 @@ def main():
         help="Freezes flask application into build directory",
     )
     parser.add_argument(
-        "--build_live",
+        "--live",
         action="store_true",
-        help="Freezes flask application and build to docs directory",
+        default=False,
+        help="Freezes flask application and builds to github directory",
+    )
+    parser.add_argument(
+        "--path",
+        default=os.path.join(Path().resolve().parent, "spencerbraun.github.io"),
+        help="build live version to custom path",
     )
     args = parser.parse_args()
 
-    if args.build or args.build_live:
+    if args.build:
         freezer.freeze()
-        if args.build_live:
-            if os.path.exists("docs"):
-                shutil.rmtree("docs")
-            shutil.copytree("build", "docs")
+    elif args.live:
+        customcopy("build", args.path)
     else:
         app.run(host="localhost", port=8000)
 
