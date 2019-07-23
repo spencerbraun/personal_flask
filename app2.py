@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 
+import argparse
 import os
+import shutil
 import sys
 
 from flask import (
@@ -72,8 +74,27 @@ def page(path):
     return render_template("page.html", page=page)
 
 
-if __name__ == "__main__":
-    if len(sys.argv) > 1 and sys.argv[1] == "build":
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        '--build',
+        action='store_true',
+        help='Freezes flask application into build dir'
+    )
+    parser.add_argument(
+        '--build_live',
+        action='store_true',
+        help='Freezes flask application and build to docs dir'
+    )
+    args = parser.parse_args()
+
+    if args.build or args.build_live:
         freezer.freeze()
+        if args.build_live:
+            shutil.copytree('build', 'docs')
     else:
         app.run(host="localhost", port=8000)
+
+
+if __name__ == "__main__":
+    main()
