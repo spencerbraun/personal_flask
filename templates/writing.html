@@ -1,16 +1,13 @@
-{% extends "base.html" %}
-
-{% block content_title %}{% if search %}Search "{{ search }}"{% endif %}Writing{% endblock %}
-
+{% extends "basestatic.html" %}
 
 {% block content %}
-  {% for entry in object_list %}
-    <h3>
-      <a class="post_title" href="{% if entry.published %}{{ url_for('detail', slug=entry.slug) }}{% else %}{{ url_for('edit', slug=entry.slug) }}{% endif %}">
-        {{ entry.title }}
-      </a>
-    </h3>
-    <h5>{{ entry.timestamp.strftime('%Y-%m-%d') }}</h5>
+<h2>Writing</h2>
+
+<ul>
+  {% for page in pages %}
+      <li><a href="{{ url_for('page', path=page.path) }}">
+          {{ page.title }}
+      </a>- {{ page.date }}</li>
   {% endfor %}
-  {% include "includes/pagination.html" %}
+</ul>
 {% endblock %}
