@@ -56,19 +56,21 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--build",
-        action="store_true", 
-        help="Freezes flask application into build dir"
+        action="store_true",
+        help="Freezes flask application into build directory",
     )
     parser.add_argument(
         "--build_live",
         action="store_true",
-        help="Freezes flask application and build to docs dir",
+        help="Freezes flask application and build to docs directory",
     )
     args = parser.parse_args()
 
     if args.build or args.build_live:
         freezer.freeze()
         if args.build_live:
+            if os.path.exists("docs"):
+                shutil.rmtree("docs")
             shutil.copytree("build", "docs")
     else:
         app.run(host="localhost", port=8000)
