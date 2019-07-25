@@ -5,7 +5,7 @@
 
 <ul>
   {% for page in pages %}
-      <li><a href="{{ url_for('page', path=page.path) }}">
+      <li><a class='post-title' href="{{ url_for('page', path=page.path) }}">
           {{ page.title }}
       </a>- {{ page.date }}</li>
   {% endfor %}

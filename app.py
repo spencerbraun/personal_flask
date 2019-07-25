@@ -63,6 +63,13 @@ def writing():
     return render_template("writing.html", pages=sorted_posts)
 
 
+@app.route("/projects/")
+def projects():
+    posts = [page for page in pages if 'projects' in page.meta["tag"]]
+    sorted_posts = sorted(posts, reverse=True, key=lambda page: page.meta["date"])
+    return render_template("projects.html", pages=sorted_posts)
+
+
 @app.route("/<path:path>/")
 def page(path):
     page = pages.get_or_404(path)

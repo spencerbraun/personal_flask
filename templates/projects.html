@@ -1,42 +1,13 @@
-{% extends "base.html" %}
-<!--
-{% block title %}Writing{% endblock %}
-
-{% block content_title %}{% if search %}Search "{{ search }}"{% else %}Blog entries{% endif %}{% endblock %}
-
+{% extends "basestatic.html" %}
 
 {% block content %}
-  {% for entry in object_list %}
-    <h3>
-      <a href="{% if entry.published %}{{ url_for('detail', slug=entry.slug) }}{% else %}{{ url_for('edit', slug=entry.slug) }}{% endif %}">
-        {{ entry.title }}
-      </a>
-    </h3>
-    <p>Created {{ entry.timestamp.strftime('%m/%d/%Y at %G:%I%p') }}</p>
-  {% else %}
-    <p>No entries have been created yet.</p>
+<h2>Projects</h2>
+
+<ul>
+  {% for page in pages %}
+      <li><a href="{{ url_for('page', path=page.path) }}">
+          {{ page.title }}
+      </a>- {{ page.date }}</li>
   {% endfor %}
-  {% include "includes/pagination.html" %}
-{% endblock %} -->
-
-
-<!-- Main Content -->
-<div class="container">
-  <div class="row">
-    <div class="col-lg-8 col-md-10 mx-auto">
-        <div class="container">
-          {% for category, message in get_flashed_messages(with_categories=true) %}
-            <div class="alert alert-{{ category }} alert-dismissable">
-              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-              <p>{{ message }}</p>
-            </div>
-          {% endfor %}
-
-      </div>
-      <!-- Pager -->
-      <!-- <div class="clearfix">
-        <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
-      </div>
-    </div>
-  </div>
-</div>
+</ul>
+{% endblock %}

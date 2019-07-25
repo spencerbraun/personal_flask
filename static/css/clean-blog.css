@@ -1,246 +1,165 @@
 html {
-  font-size: 25px;
-  color: #0B4575;
-  font-family: 'Josefin Sans', sans-serif;
+    font-size: 25px;
+    color: #0B4575;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 body {
     font-size: 25px;
-    color: #0B4575;
+    color: black;
     font-family: 'Josefin Sans', sans-serif;
     padding: 0 5px 5px 5px;
 }
 
 p {
-  line-height: 1.5;
-  margin: 0px 0;
-  font-size: 15px;
-  color: light-grey;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  margin: 0px 0;
-}
-
-p a {
-  text-decoration: underline;
+    line-height: 1.5;
+    margin: 0px 0;
+    font-size: 15px;
+    color: black;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    margin: 0px 0;
 }
 
 h1 {
-  margin: 0;
-  padding: 20px 0;
-  color: black;
+    margin: 0;
+    padding: 20px 0;
+    color: #0B4575;
 }
+
 h2 {
-  font-size: 25px;
-  color: #0B4575;
-  font-family: 'Josefin Sans', sans-serif;
-  font-weight:600;
-  margin: 15px 0;
+    font-size: 25px;
+    color: #0B4575;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    margin: 15px 0;
 }
+
 h5 {
-  font-size: 15px;
-  color: #0B4575;
-  font-family: 'Josefin Sans', sans-serif;
-  font-weight:300;
-  margin-bottom: 25px 0;
+    font-size: 15px;
+    color: #0B4575;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    margin-bottom: 25px 0;
 }
+
 h6 {
-  font-weight: 800;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 800;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #0B4575;
-  font-family: 'Josefin Sans', sans-serif;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+    color: #0B4575;
+    font-family: 'Josefin Sans', sans-serif;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
 }
 
 a.post_title {
-  font-size: 20px;
-  color: #0B4575;
-  font-family: 'Josefin Sans', sans-serif;
-  font-weight:600;
-  margin: 0px 0;
+    font-size: 20px;
+    color: #0B4575;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    margin: 0px 0;
 }
 
 a:focus, a:hover {
-  color: #64A6Bd;
+    color: #820800;
+    text-decoration: none;
 }
 
 blockquote {
-  font-style: italic;
-  color: #868e96;
+    font-style: italic;
+    color: #868e96;
 }
 
 ::-moz-selection {
-  color: #fff;
-  background: #64A6Bd;
-  text-shadow: none;
+    color: #fff;
+    background: #64A6Bd;
+    text-shadow: none;
 }
 
 ::selection {
-  color: #fff;
-  background: #64A6Bd;
-  text-shadow: none;
+    color: #fff;
+    background: #64A6Bd;
+    text-shadow: none;
 }
 
 img::-moz-selection {
-  color: #fff;
-  background: transparent;
+    color: #fff;
+    background: transparent;
 }
 
 img::selection {
-  color: #fff;
-  background: transparent;
+    color: #fff;
+    background: transparent;
 }
 
 img::-moz-selection {
-  color: #fff;
-  background: transparent;
-}
-
-header.masthead {
-  margin-bottom: 5px;
-  background-color: #ffffff;
-  position: relative;
-  background-size: cover;
-}
-
-header.masthead .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: #ffffff;
-  opacity: 0.5;
-}
-
-header.masthead .site-heading {
-  color: #0B4575;
-  text-align: left;
+    color: #fff;
+    background: transparent;
 }
 
 @media only screen and (min-width: 768px) {
-  header.masthead .site-heading {
-    padding: 30px 0;
-  }
-}
-
-header.masthead .site-heading h1 {
-  color: #0B4575;
-  font-family: 'Josefin Sans', sans-serif;
-  font-weight:600;
-  font-size: 50px;
-}
-
-header.masthead .site-heading .subheading {
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 1.1;
-  display: block;
-  margin: 10px 0 0;
-  font-size: 15px;
-  color: #0B4575;
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 20px;
+    header.masthead .site-heading {
+        padding: 30px 0;
+    }
 }
 
 @media only screen and (min-width: 768px) {
-  header.masthead .page-heading h1,
-  header.masthead .site-heading h1,
+    header.masthead .page-heading h1,
+    header.masthead .site-heading h1,
 }
 
 footer {
-  padding: 50px 0 65px;
+    padding: 50px 0 65px;
 }
 
 footer .list-inline {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .btn {
-  font-size: 12px;
-  font-weight: 800;
-  padding: 15px 25px;
-  letter-spacing: 1px;
-  border-radius: 0;
-  font-family: 'Josefin Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    padding: 15px 25px;
+    letter-spacing: 1px;
+    border-radius: 0;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 .btn-primary {
-  background-color: #0085A1;
-  border-color: #0085A1;
+    background-color: #0085A1;
+    border-color: #0085A1;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-  color: #fff;
-  background-color: #00657b !important;
-  border-color: #00657b !important;
+    color: #fff;
+    background-color: #00657b !important;
+    border-color: #00657b !important;
 }
 
 .btn-lg {
-  font-size: 12px;
-  padding: 25px 35px;
+    font-size: 12px;
+    padding: 25px 35px;
 }
 
-
-
-#sidebar-wrapper {
-  min-height: 45vh;
-  margin-left: -15rem;
-  -webkit-transition: margin .25s ease-out;
-  -moz-transition: margin .25s ease-out;
-  -o-transition: margin .25s ease-out;
-  transition: margin .25s ease-out;
-  background: #ffffff;
-  padding: 6px 30px 6px 16px;
-  font-size: 18px;
-  border-right: 1px solid #0B4575;
-  }
-
-#sidebar-wrapper .sidebar-heading {
-  padding: 0.875rem 1.25rem;
-  font-size: 1.2rem;
+.navbar-custom {
+    color: black;
+    font-size: 20px;
+    background-color: #ffffff;
+    padding: 5px 10px 5px 10px;
 }
 
-#sidebar-wrapper .list-group {
-  width: 15rem;
-}
-
-#page-content-wrapper {
-  min-width: 100vw;
-}
-
-#wrapper.toggled #sidebar-wrapper {
-  margin-left: 0;
-}
-
-@media (min-width: 768px) {
-  #sidebar-wrapper {
-    margin-left: 0;
-  }
-
-  #page-content-wrapper {
-    min-width: 0;
-    width: 100%;
-  }
-
-  #wrapper.toggled #sidebar-wrapper {
-    margin-left: -15rem;
-  }
-}
-
-nav ul, nav ul li {
-  display: inline-block;
-  list-style: none;
-  margin: 20px 10px;
-}
-
-nav ul li a {
-  text-decoration: none;
-  font-weight: 400;
-  text-transform: uppercase;
+header .masthead p {
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    line-height: 1.1;
+    padding: 25px 0 0 0;
+    margin: 0 0 0 0;
+    color: #0B4575;
+    background-color: #ffffff;
 }
