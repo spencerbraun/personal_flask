@@ -49,7 +49,8 @@ def index():
 
 @app.route("/about/")
 def about():
-    return render_template("about.html")
+    page = pages.get_or_404('about')
+    return render_template("page.html", page=page)
 
 
 @app.route("/writing/")

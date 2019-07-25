@@ -1,17 +1,11 @@
 html {
     font-size: 25px;
     color: #0B4575;
-    font-family: 'Josefin Sans', sans-serif;
-    font-style: italic;
-    font-weight: 300;
 }
 
 body {
     font-size: 25px;
     color: black;
-    font-family: 'Josefin Sans', sans-serif;
-    font-style: italic;
-    font-weight: 300;
     padding: 0 5px 5px 5px;
 }
 
