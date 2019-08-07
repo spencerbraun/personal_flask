@@ -3,11 +3,16 @@
 {% block content %}
 <h2>Writing</h2>
 
-<ul>
+<ul style="list-style-type:none">
   {% for page in pages %}
-      <li><a class='post-title' href="{{ url_for('page', path=page.path) }}">
+      <li>
+          <a href="{{ url_for('page', path=page.path) }}">
           {{ page.title }}
-      </a>- {{ page.date }}</li>
+          </a>
+      </li>
+      <div class="date">{{ page.date }}</div>
+      <div class="abstract">{{ page.abstract }}</div>
+      </br>
   {% endfor %}
 </ul>
 {% endblock %}

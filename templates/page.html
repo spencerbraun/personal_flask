@@ -1,5 +1,6 @@
 {% extends "basestatic.html" %}
 {% block content %}
         <h2>{{ page.title }}</h2>
+        <div class="date">{{ page.date }}</div>
         {{ page.html|safe }}
 {% endblock %}

@@ -66,7 +66,11 @@ def writing():
 
 @app.route("/projects/")
 def projects():
-    posts = [page for page in pages if 'projects' in page.meta["tag"]]
+    posts = [
+        page
+        for page in pages
+        if any([tag in page.meta["tag"] for tag in ["date", "projects"]])
+    ]
     sorted_posts = sorted(posts, reverse=True, key=lambda page: page.meta["date"])
     return render_template("projects.html", pages=sorted_posts)
 

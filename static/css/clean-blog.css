@@ -32,6 +32,25 @@ h2 {
     font-style: italic;
     font-weight: 600;
     margin: 15px 0;
+    margin: 0px 0;
+}
+
+.date {
+    font-size: 14px;
+    color: grey;
+    font-family: 'Josefin Sans', sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    margin: 0px 0px 10px 0px;
+    padding: 0px 0;
+}
+
+.abstract {
+    font-size: 16px;
+    color: black;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    margin: 0px 0;
 }
 
 h5 {
@@ -44,17 +63,31 @@ h5 {
 }
 
 h6 {
-    font-weight: 800;
-    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #0B4575;
+    font-size: 20px;
+    font-weight: 300;
+    font-family: 'Josefin Sans', sans-serif;
+    font-style: italic;
 }
 
 a {
     color: #0B4575;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+li a {
+    color: #0B4575;
+    font-size: 20px;
     font-family: 'Josefin Sans', sans-serif;
     font-style: italic;
     font-weight: 300;
     -webkit-transition: all 0.2s;
     transition: all 0.2s;
+}
+
+ul {
+  padding-left: 0px;
+  list-style-type:none;
 }
 
 a.post_title {
@@ -167,4 +200,9 @@ header .masthead p {
     margin: 0 0 0 0;
     color: #0B4575;
     background-color: #ffffff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }

@@ -1,10 +1,10 @@
 title: About
 tag: about
 
-I am currently a grad student at Stanford working on a Master’s in Statistics. I’m a self-taught programmer, voracious reader, and fan of the outdoors. I'm a native New Yorker, but have tried life in DC, Philly, and now the Bay Area. I love reading Russian lit, monetary economics, biographies, and economic histories and am always looking for suggestions.
+I am currently a grad student at Stanford working on a Master’s in Statistics. I’m a self-taught programmer, voracious reader, and fan of the outdoors. I'm a native New Yorker, but have tried life in DC, Philly, and now the Bay Area. I love reading Russian lit, monetary economics, biographies, and economic histories.
 
 <br/>
-Previously I worked at [Hudson River Trading](https://www.hudson-trading.com), a high-frequency algorithmic trading firm. I spent most of my time coding in Python creating performance dashboards, automating different pieces of the broker-dealer, and working on interdepartmental projects. I started my working life at [Berkeley Research Group](https://www.thinkbrg.com), an expert-driven consulting firm. There I provided analytical support for economists and industry experts on assessing damages in corporate litigation and tracing assets flows in service of corporate restructurings.
+Previously I worked at [Hudson River Trading](https://www.hudson-trading.com), a high-frequency algorithmic trading firm. I spent most of my time coding in Python automating different pieces of the broker-dealer, monitoring trading and performance, and managing interdepartmental projects. I started my working life at [Berkeley Research Group](https://www.thinkbrg.com), an expert-driven consulting firm.
 
 <br/>
 To get in touch, find me on  

@@ -1,5 +1,5 @@
 title: Bacon Ipsum
-date: 2013-07-14 12:00:00
+date: 2013-07-14
 published: 2015-10-15
 tag: [technical, writing]
 
