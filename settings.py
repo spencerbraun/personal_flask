@@ -10,7 +10,8 @@ FREEZER_REMOVE_EXTRA_FILES = False
 FLATPAGES_MARKDOWN_EXTENSIONS = ['codehilite']
 FLATPAGES_EXTENSION_CONFIG = {
     'codehilite': {
-        'linenums': 'True'
+        'linenums': True,
+        'use_pygments': True
     }
 }
 FLATPAGES_ROOT = os.path.join(APP_DIR, 'pages')

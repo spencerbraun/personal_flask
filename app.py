@@ -17,7 +17,10 @@ from flask import (
     session,
     url_for,
 )
-from flask_flatpages import FlatPages
+
+from feedgen.feed import FeedGenerator
+
+from flask_flatpages import FlatPages, pygments_style_defs
 from flask_frozen import Freezer
 
 app = Flask(__name__)
@@ -79,7 +82,12 @@ def projects():
 def page(path):
     page = pages.get_or_404(path)
     return render_template("page.html", page=page)
-
+    
+    
+@app.route('/pygments.css')
+def pygments_css():
+    return pygments_style_defs('tango'), 200, {'Content-Type': 'text/css'}
+    
 
 def main():
     parser = argparse.ArgumentParser()

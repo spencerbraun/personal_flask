@@ -3,7 +3,7 @@
 {% block content %}
 <h2>Projects</h2>
 
-<ul>
+<ul class="post_list">
   {% for page in pages %}
       <li>
           <a href="{{ url_for('page', path=page.path) }}">

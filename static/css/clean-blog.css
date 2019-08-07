@@ -85,9 +85,9 @@ li a {
     transition: all 0.2s;
 }
 
-ul {
-  padding-left: 0px;
-  list-style-type:none;
+ul.post_list {
+    list-style-type:none;
+    padding-left: 0px;
 }
 
 a.post_title {
