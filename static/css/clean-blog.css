@@ -75,7 +75,9 @@ a {
     font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-li a {
+
+
+li > a {
     color: #0B4575;
     font-size: 20px;
     font-family: 'Josefin Sans', sans-serif;
@@ -83,6 +85,22 @@ li a {
     font-weight: 300;
     -webkit-transition: all 0.2s;
     transition: all 0.2s;
+}
+
+li > p > a {
+    color: #0B4575;
+    line-height: 1.5;
+    margin: 0px 0;
+    font-size: 15px;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    font-style: sans-serif;
+    margin: 0px 0;
+}
+
+ul {
+    list-style-type: disc;
+    list-style-position: outside;
 }
 
 ul.post_list {
