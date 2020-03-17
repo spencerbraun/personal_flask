@@ -10,7 +10,7 @@ Using [Dash](https://plot.ly/dash) and Plotly, I created a simple tool to pull i
   
 &nbsp;
   
-###### Historical Yields  
+### Historical Yields  
   
 The first chart simply shows the historical path for yields for each Treasury maturity. Lately while shorter term maturities (say < 1 year) have been relatively flat, longer term maturities have sharply declining yields. The Federal Reserve has more direct control over short-term maturities by setting the target range for the Fed Funds rate and providing guidance through commentary and dot plots. Longer term yields are a reflection of the market's expectation of future interest rates. As economic data has weakened and the Fed has turned from raising rates to a potential easing cycle, longer term Treasury yields have declined.  
 
@@ -18,7 +18,7 @@ The first chart simply shows the historical path for yields for each Treasury ma
   
 &nbsp;
   
-###### Yield Spreads  
+### Yield Spreads  
 
 Yield spreads are one place to look when discussions of an yield curve inversions are omnipresent. An inversion occurs when a shorter term Treasury becomes higher yielding than a longer term maturity. What maturity pair determines when the curve is officially inverted? Market participants do not fully agree on this question, so the chart below shows the spreads between yields of three different maturity pairs: 10 years / 2 years, 10 years / 6 months, and 5 years / 2 years. When the spread is below zero, the longer maturity Treasury has a lower yield than the shorter one, meaning that yield spread in inverted. So far the 10yr-2yr spread has not inverted, while the other two have bounced in and out of inversion.  
 
@@ -30,7 +30,7 @@ Typically, one might expect long term Treasuries to yield more than shorter term
     
 &nbsp;
     
-###### Yield Curves  
+### Yield Curves  
 
 Finally, the dashboard has a graph of yield curves - every maturity plotted against their yields on a specific date. By plotting the trailing 5 days, we can see how the shape of the yield curve has changed from the recent past. Trade tensions and the recent reduction in the target Fed Funds has sent yields plunging in the last week.
 

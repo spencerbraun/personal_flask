@@ -8,7 +8,7 @@ I had a bit of time on my hands this summer and decided it would be a good time 
   
 &nbsp;
   
-###### What Else I Considered  
+### What Else I Considered  
 * [Jekyll](https://jekyllrb.com/docs/github-pages/)  
 Jekyll came up with every Google, and it certainly would have been easier to implement than my solution. However, it runs on Ruby and though I have some experience with it, I was really looking for a Python project. Still, this framework is so appealing I could see moving my site over to it in the future.  
 
@@ -20,7 +20,7 @@ I have built several sites in Flask and find it simple and intuitive. Sure they 
   
 &nbsp;
   
-###### My Way  
+### My Way  
 * [Github Pages](https://pages.github.com/)  
 After looking around at hosting options, I settled on Github Pages. It is free and relatively straightforward to use - hard to beat that. This meant my site had to be completely static to work with Github (for now at least). Dissatisfied with the static site generators I had already looked into, I wanted a way to use Flask and keep the site static.  
 
@@ -34,7 +34,7 @@ Twitter's Bootstrap framework is an easy way to structure the CSS and HTML for a
 Simple Bootstrap had a number of starting templates to work with. While the site retains very little of the code from the template, it was a good way to refresh my memory of how different tags and styles worked together.
 
 
-###### How It All Works Together  
+### How It Works Together  
 What is left is pretty simple - a flask style site that generates static html pages based on certain templates:  
 `app.py` - this is the main heart of the site. It generate the routes to each webpage (about, writing, projects, or any blog post). It also freezes the site when `--build` is passed as an arg.  
 `settings.py` is called when the app is initiated. It provides some basic setting for how markdown pages are turned into HTML.  

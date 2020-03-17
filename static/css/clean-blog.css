@@ -35,6 +35,16 @@ h2 {
     margin: 0px 0;
 }
 
+h3 {
+    font-size: 22px;
+    color: #0B4575;
+    font-family: 'Josefin Sans', sans-serif;
+    font-style: italic;
+    font-weight: 600;
+    margin: 15px 0;
+    margin: 0px 0;
+}
+
 .date {
     font-size: 14px;
     color: grey;
@@ -64,7 +74,7 @@ h5 {
 
 h6 {
     color: #0B4575;
-    font-size: 20px;
+    font-size: 12px;
     font-weight: 300;
     font-family: 'Josefin Sans', sans-serif;
     font-style: italic;
