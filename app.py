@@ -47,7 +47,11 @@ def customcopy(src, dst, symlinks=False, ignore=None):
 def index():
     posts = [page for page in pages if "date" in page.meta]
     sorted_posts = sorted(posts, reverse=True, key=lambda page: page.meta["date"])
-    return render_template("index.html", pages=sorted_posts)
+    labels = list(map(
+        lambda x: 'writing' if 'writing' in x.meta["tag"] else 'projects',
+        sorted_posts
+    ))
+    return render_template("index.html", pages=sorted_posts, labels=labels)
 
 
 @app.route("/about/")
@@ -78,10 +82,22 @@ def projects():
     return render_template("projects.html", pages=sorted_posts)
 
 
-@app.route("/<path:path>/")
-def page(path):
+@app.route("/writing/<path:path>.html")
+def writing_page(path):
     page = pages.get_or_404(path)
     return render_template("page.html", page=page)
+    
+    
+@app.route("/projects/<path:path>.html")
+def projects_page(path):
+    page = pages.get_or_404(path)
+    return render_template("page.html", page=page)
+
+    
+# @app.route("/<path:path>.html")
+# def page(path):
+#     page = pages.get_or_404(path)
+#     return render_template("page.html", page=page)
     
     
 @app.route('/pygments.css')

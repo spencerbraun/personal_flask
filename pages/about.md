@@ -9,7 +9,7 @@ Penn grad, New Yorker <br/>
 
 <br/>
 ##### Work
-2016-2019: [Hudson River Trading](https://www.hudson-trading.com), a high-frequency algorithmic trading firm
+2016-2019: [Hudson River Trading](https://www.hudson-trading.com), a high-frequency algorithmic trading firm <br/>
 2014-2016: [Berkeley Research Group](https://www.thinkbrg.com), an expert-driven consulting firm.  
 
 

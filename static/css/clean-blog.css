@@ -21,28 +21,41 @@ p {
 
 h1 {
     margin: 0;
-    padding: 20px 0;
+    padding: 22px 0;
     color: #0B4575;
 }
 
 h2 {
     font-size: 25px;
-    color: #0B4575;
+    color: grey;
     font-family: 'Josefin Sans', sans-serif;
-    font-style: italic;
     font-weight: 600;
-    margin: 15px 0;
+    margin: 18px 0;
     margin: 0px 0;
 }
 
 h3 {
     font-size: 22px;
-    color: #0B4575;
+    color: grey;
     font-family: 'Josefin Sans', sans-serif;
-    font-style: italic;
     font-weight: 600;
     margin: 15px 0;
     margin: 0px 0;
+}
+
+h5 {
+    font-size: 15px;
+    color: grey;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    margin-bottom: 25px 0;
+}
+
+h6 {
+    color: grey;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 .date {
@@ -61,23 +74,6 @@ h3 {
     font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 300;
     margin: 0px 0;
-}
-
-h5 {
-    font-size: 15px;
-    color: #0B4575;
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: 300;
-    font-style: italic;
-    margin-bottom: 25px 0;
-}
-
-h6 {
-    color: #0B4575;
-    font-size: 12px;
-    font-weight: 300;
-    font-family: 'Josefin Sans', sans-serif;
-    font-style: italic;
 }
 
 a {

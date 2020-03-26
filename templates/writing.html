@@ -6,7 +6,7 @@
 <ul class="post_list">
   {% for page in pages %}
       <li>
-          <a href="{{ url_for('page', path=page.path) }}">
+          <a href="{{ url_for('writing_page', path=page.path) }}">
           {{ page.title }}
           </a>
       </li>
